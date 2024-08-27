@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viwport"
+    content="width=device-width,
+    initial-scale=1.0">
+    <title>시간 변환기</title>
+    <link rel="stylesheet"
+    href="style.css">
+    <link rel="icon"
+    href="그림1.jpg" type="image/jpg"
+</head>
+<body>
+    <div class="container">
+        <h1>UTC</h1>
+        <form id="converter-form">
+            <label
+            for="utc-time">UTC 날짜 입력
+            (YYYY-MM-DD)</label>
+            <input type="date"
+            id="utc-date" required>
+
+            <label
+            for="utc-time">UTC 시간 입력
+            (HH:MM:SS)</label>
+            <input type="text"
+            id="utc-time" placeholder="HH:MM:SS"
+            pattern="^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$" required>
+
+            <button
+            type="submit">변환</button>
+        </form>
+
+        <div id="result-container">
+            <h2>KRT</h2>
+            <div class="result-box">
+                <div id="date-box" class="box"></div>
+                <div id="time-box" class="box"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
